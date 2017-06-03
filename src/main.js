@@ -42,7 +42,6 @@ function check(i,j,a) {
     {
         die--
     }
-
     if (a[i][j] === "1") {
         if (live === 2 || live === 3) {
             return "1"
@@ -68,8 +67,22 @@ const square = (n) => {
           //console.log(result[i][j])
       }
   }
+  var test = [[]]
+  for (var i =0;i <length;i++ )
+  {
+      test[i] = []
+      for (var j=0;j<length;j++)
+      {
+          test[i][j] = result[i][j]
+          if(result[i][j] === "0")
+          {
+             test[i][j] = " "
+          }
+      }
+  }
   return result;
 };
+
 
 module.exports = {
   square
